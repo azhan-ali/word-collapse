@@ -1232,18 +1232,29 @@ if (mobileContinue) {
   });
 }
 
-initFloaters();
-applyTheme(state.theme);
-checkMobileOverlay();
-state.lastTick = performance.now();
-requestAnimationFrame(tick);
 
 function hideIntro() {
+  console.log('Hiding intro...');
   if (introOverlay) {
     introOverlay.classList.add('hidden');
+    console.log('Intro hidden class added');
+  } else {
+    console.error('Intro overlay element not found!');
   }
 }
 
-if (introClose) {
-  introClose.addEventListener('click', hideIntro);
-}
+document.addEventListener('DOMContentLoaded', () => {
+  initFloaters();
+  applyTheme(state.theme);
+  checkMobileOverlay();
+  state.lastTick = performance.now();
+  requestAnimationFrame(tick);
+
+  if (introClose) {
+    console.log('Intro close button found, attaching listener');
+    introClose.addEventListener('click', hideIntro);
+  } else {
+    console.error('Intro close button not found!');
+  }
+});
+
