@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Word Popper</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <main class="page">
     <div id="frame" class="frame">
@@ -74,7 +76,8 @@
             </label>
           </div>
           <form id="entry-form" autocomplete="off">
-            <input id="word-input" name="word" placeholder="Type a word and hit Enter" spellcheck="false" autocomplete="off" />
+            <input id="word-input" name="word" placeholder="Type a word and hit Enter" spellcheck="false"
+              autocomplete="off" />
             <button type="submit" class="secondary">Pop</button>
           </form>
           <div class="hint">Words bounce around like the old DVD logo. Pop as many as you can in 60 seconds.</div>
@@ -98,13 +101,20 @@
               <li>Toggle “Allow rotation” to spin bouncing items 90° on each wall hit.</li>
               <li>Pick a theme (Dark, Light, Neon, Retro CRT) anytime.</li>
             </ul>
-            <button id="intro-close" class="primary" type="button">Got it</button>
+            <button id="intro-close" class="close-icon-btn" type="button" aria-label="Close">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
+            </button>
           </div>
         </div>
         <div id="mobile-overlay" class="overlay intro hidden">
           <div class="overlay-card">
             <p class="overlay-title">Best on a computer</p>
-            <p class="overlay-detail">It looks like you’re on a phone-sized screen. For the smoothest play, open this on a larger display.</p>
+            <p class="overlay-detail">It looks like you’re on a phone-sized screen. For the smoothest play, open this on
+              a larger display.</p>
             <button id="mobile-continue" class="primary" type="button">Play here anyway</button>
           </div>
         </div>
@@ -112,6 +122,7 @@
     </div>
   </main>
 
-  <script src="script.js"></script>
+  <script type="module" src="script.js"></script>
 </body>
+
 </html>

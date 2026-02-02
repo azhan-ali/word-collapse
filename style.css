@@ -453,6 +453,29 @@ button:hover {
   border: 1px solid rgba(255, 255, 255, 0.06);
   text-align: center;
   width: min(540px, calc(100vw - 48px));
+  position: relative;
+}
+
+.close-icon-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.close-icon-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  transform: rotate(90deg);
 }
 
 .overlay-title {
