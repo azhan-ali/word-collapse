@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Word Popper</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <div id="frame" class="frame">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">Speed type challenge</p>
+          <h1>Word Popper</h1>
+          <p class="lede">Type words to pop them before the minute runs out. A new word drifts in every second.</p>
+          <div class="hero-actions">
+            <button id="start-btn" class="primary" type="button">Start</button>
+            <button id="stop-btn" class="secondary ghost" type="button">Stop</button>
+          </div>
+          <div class="theme-picker">
+            <span class="label">Theme</span>
+            <div class="theme-buttons">
+              <button type="button" class="chip" data-theme="dark">Dark</button>
+              <button type="button" class="chip" data-theme="light">Light</button>
+              <button type="button" class="chip" data-theme="neon">Neon</button>
+              <button type="button" class="chip" data-theme="crt">Retro CRT</button>
+            </div>
+          </div>
+          <label class="pin-toggle">
+            <input type="checkbox" data-floater="hero" />
+            <span>Freeze title</span>
+          </label>
+        </div>
+      </header>
+
+      <div class="panel stats">
+        <div class="stat">
+          <span class="label">Words</span>
+          <span class="value" id="popped-count">0</span>
+        </div>
+        <div class="stat">
+          <span class="label">Score</span>
+          <span class="value" id="score">0</span>
+        </div>
+        <div class="stat">
+          <span class="label">Streak</span>
+          <span class="value" id="streak">0</span>
+        </div>
+        <div class="stat">
+          <span class="label">Time</span>
+          <span class="value" id="timer">60s</span>
+        </div>
+        <div class="stat">
+          <span class="label">Active</span>
+          <span class="value" id="active-count">0</span>
+        </div>
+        <label class="pin-toggle stats-pin">
+          <input type="checkbox" data-floater="stats" />
+          <span>Freeze score</span>
+        </label>
+      </div>
+
+      <div class="panel rotate-panel">
+        <button id="rotate-btn" class="chip chip-lg" type="button">Allow rotation</button>
+      </div>
+
+      <section class="panel game-shell">
+        <div class="game-controls">
+          <div class="controls-row">
+            <label class="pin-toggle">
+              <input type="checkbox" data-floater="controls" />
+              <span>Freeze input</span>
+            </label>
+          </div>
+          <form id="entry-form" autocomplete="off">
+            <input id="word-input" name="word" placeholder="Type a word and hit Enter" spellcheck="false" autocomplete="off" />
+            <button type="submit" class="secondary">Pop</button>
+          </form>
+          <div class="hint">Words bounce around like the old DVD logo. Pop as many as you can in 60 seconds.</div>
+        </div>
+        <div id="playfield" class="playfield" aria-live="polite"></div>
+        <div id="overlay" class="overlay hidden">
+          <div class="overlay-card">
+            <p id="overlay-title" class="overlay-title"></p>
+            <p id="overlay-detail" class="overlay-detail"></p>
+            <button id="restart-btn" class="primary ghost" type="button">Play again</button>
+          </div>
+        </div>
+        <div id="intro-overlay" class="overlay intro">
+          <div class="overlay-card">
+            <p class="overlay-title">How to play</p>
+            <ul class="overlay-list">
+              <li>Press Start. A new word bounces in every second.</li>
+              <li>Type a word and hit Enter/Pop to pop it.</li>
+              <li>Score = word length; wrong entry subtracts the characters you typed.</li>
+              <li>Streak counts consecutive correct pops; track Words/Score/Streak in the stats bubble.</li>
+              <li>Toggle “Allow rotation” to spin bouncing items 90° on each wall hit.</li>
+              <li>Pick a theme (Dark, Light, Neon, Retro CRT) anytime.</li>
+            </ul>
+            <button id="intro-close" class="primary" type="button">Got it</button>
+          </div>
+        </div>
+        <div id="mobile-overlay" class="overlay intro hidden">
+          <div class="overlay-card">
+            <p class="overlay-title">Best on a computer</p>
+            <p class="overlay-detail">It looks like you’re on a phone-sized screen. For the smoothest play, open this on a larger display.</p>
+            <button id="mobile-continue" class="primary" type="button">Play here anyway</button>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+Difficulty modes: adjust spawn rate and max simultaneous words; add “hard” with faster speeds and shorter timer.
+Penalties: small score loss for wrong input or missed words; or reduce time slightly on mistakes.
+Combos & streaks: bonus points for consecutive pops without a miss; show a streak meter.
+Power-ups: occasional special words that slow all words, freeze them briefly, or double points for 5s.
+Word packs: switchable lists (animals, space, verbs); let the player choose before starting.
+Sound & feedback: pop blip, miss buzz, start/stop chimes; toggle in settings.
+Persistent stats: best score, average WPM-ish metric, total pops; keep in localStorage.
+Daily challenge: fixed seed/word order once per day; shareable score string.
+Pause/Resume: space bar to pause; overlay shows “paused”.
+Accessibility: larger text mode, high-contrast mode, optional outlined words; ensure focus stays in the input.
+Mobile tweaks: bigger input/button row, optional on-screen “Pop” tapper; keep floating UI from overlapping keyboard.
+Themes: neon, retro CRT, light mode; switch via a small palette button.
+Tutorials: quick inline overlay showing “type a word and press Enter.”
+Leaderboard placeholder: local top-5; optionally export/import JSON (no server needed).
